@@ -15,7 +15,7 @@ Users will be able to add important events to a daily planner so they can manage
 ![image](./assets/photos/Mock-Up.gif)
 
 ## Website
-TBD
+https://sam-pettyjohn.github.io/daily-planner/
 
 ## Built With
 - JavaScript
