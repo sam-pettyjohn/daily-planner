@@ -17,16 +17,16 @@ var year = today.getFullYear();
 var date = today.getDate();
 
 function ordinals(date) {
-    if (date = '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '24', '25', '26', '27', '28', '29', '30') {
-        return today.getDate() + 'th';
-    } else if (date = '1', '21', '31') {
-        return today.getDate() + 'st';
-    } else if (date = '2', '22') {
-        return today.getDate() + 'nd';
+    if (date == 31 || date == 21 || date == 1) {
+        return date + "st";
+    } else if (date == 22 || date == 2) { 
+        return date + "nd";
+    } else if (date == 23 || date == 3) {
+        return date + "rd";
     } else {
-        return today.getDate() + 'rd'
+        return date + "th";
     }
-}
+};
 
 // DATE DISPLAY FUNCTION
 var currentDate = document.getElementById('currentDay').innerHTML = `${day}, ${month} ${ordinals(date)}`;
