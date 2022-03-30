@@ -68,20 +68,12 @@ textarea{
 }
   
 .saveBtn i:hover {
-    /* font-size: 20px; */
-    /* transition: all .3s ease-in-out; */
+    font-size: 20px;
+    transition: all .3s ease-in-out;
     color: black;
 }
 
 .fa-archive {
     color: white;
     font-size: x-large;
-}
-
-.hori-divider {
-    margin-top:5px;
-    margin-bottom:5px;
-    height:1px;
-    width:100%;
-    border-top:1px solid white;
 }
