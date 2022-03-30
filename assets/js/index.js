@@ -1,32 +1,28 @@
+$(document).ready(function () {
+    // Display Current Date
+    $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
-// Display Weekday Name
-var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    // Track Cuurent Hour
+    function hourTracker() {
+        var currentHour = moment().hours();
 
-var today  = new Date();
-var weekdayName = today.getDay();
-var day = days[weekdayName];
+        $(".time-block").each(function () {
+            var blockHour = parseInt($(this).attr("id").split("hour")[1]);
 
-// Display Month Name
-var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-var thisMonth = today.getMonth();
-var month = months[thisMonth];
-
-// Display Today's Date
-var year = today.getFullYear();
-var date = today.getDate();
-
-function ordinals(date) {
-    if (date == 31 || date == 21 || date == 1) {
-        return date + "st";
-    } else if (date == 22 || date == 2) { 
-        return date + "nd";
-    } else if (date == 23 || date == 3) {
-        return date + "rd";
-    } else {
-        return date + "th";
+            if (blockHour < currentHour) {
+                $(this).addClass("past");
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+            } else if (blockHour == currentHour) {
+                $(this).addClass("present");
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+            } else {
+                $(this).addClass("future");
+                $(this).removeClass("present");
+                $(this).removeClass("past");
+            }
+        })
     }
-};
-
-// DATE DISPLAY FUNCTION
-var currentDate = document.getElementById('currentDay').innerHTML = `${day}, ${month} ${ordinals(date)}`;
+    hourTracker();
+})
