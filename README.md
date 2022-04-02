@@ -18,9 +18,11 @@ Users will be able to add important events to a daily planner so they can manage
 https://sam-pettyjohn.github.io/daily-planner/
 
 ## Built With
+*With an emphasis in jQuery, Bootstrap, and FontAwesome.*
 - JavaScript
 - HTML
 - CSS
+
 
 
 #### Made with ❤️ by Sam Pettyjohn
