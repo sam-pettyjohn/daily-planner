@@ -77,3 +77,27 @@ textarea{
     color: white;
     font-size: x-large;
 }
+
+/* This will be applied on any screen 768px and below */
+@media screen and (max-width: 768px), screen and (max-width: 575px) {
+    
+    textarea {
+        min-height: 80px;
+        border: 0;
+    }
+
+    .row {
+      height: auto;
+      margin-top: 20px;
+    }
+  
+    .hour {
+      padding-right: 46%;
+    }
+  
+    .saveBtn {
+      border: 0;
+      border-radius: 5px;
+      height: 50px;
+    }
+}
